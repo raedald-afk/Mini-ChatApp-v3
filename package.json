@@ -1,0 +1,23 @@
+{
+  "name": "mini-chatapp-v3",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.0",
+    "@langchain/core": "latest",
+    "@langchain/groq": "latest",
+    "@langchain/google-genai": "latest",
+    "@langchain/openai": "latest",
+    "@langchain/langgraph": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  }
+}
