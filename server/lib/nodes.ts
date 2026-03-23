@@ -17,11 +17,11 @@ const sleep = (ms: number) => new Promise(r => setTimeout(r, ms))
 // ── STATE SCHEMA ──────────────────────────────────────────────────────────
 
 export const GraphState = Annotation.Root({
-  goal:        Annotation<string>(),
-  summary:     Annotation<string>({ default: () => '' }),
-  plan:        Annotation<string[]>({ default: () => [] }),
-  stepResults: Annotation<AgentStep[]>({ default: () => [], reducer: (_, b) => b }),
-  finalAnswer: Annotation<string | null>({ default: () => null }),
+    goal: Annotation<string>({ value: (_, b) => b, default: () => '' }),
+    summary: Annotation<string>({ value: (_, b) => b, default: () => '' }),
+    plan: Annotation<string[]>({ value: (_, b) => b, default: () => [] }),
+    stepResults: Annotation<AgentStep[]>({ value: (_, b) => b, default: () => [] }),
+    finalAnswer: Annotation<string | null>({ value: (_, b) => b, default: () => null }),
 })
 
 export type State = typeof GraphState.State
