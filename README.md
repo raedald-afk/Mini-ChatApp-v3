@@ -9,8 +9,7 @@
 > A lightweight agentic system built with **Nuxt 3**, **LangGraph**, and **LangChain** that uses **Prompt Chaining** to break complex goals into steps and execute them automatically using MCP tools.
 
 ---
-
-## 📋 Table of Contents
+## 📋    Table of Contents
 
 - [Overview](#-overview)
 - [Architecture](#-architecture)
