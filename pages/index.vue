@@ -56,10 +56,10 @@
 </template>
 
 <script setup lang="ts">
-    import { ref } from 'vue'
-
+    import { ref, nextTick } from 'vue' // Fixes 'ref' and 'nextTick'
     import type { HistoryEntry, ProviderName } from '../types/agent.ts'
-
+    import { useAgent } from '../composables/useAgent'
+  
     // Import external CSS
     import '../assets/css/terminal.css'
 

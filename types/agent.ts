@@ -28,9 +28,7 @@ export interface McpTool {
 }
 
 
-
 // ── UI TYPES ──────────────────────────────────────────────────────────────
-
 export interface HistoryEntry {
     goal: string
     provider: ProviderName
