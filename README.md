@@ -15,8 +15,6 @@
 - [Getting started](#getting-started)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Running tests](#running-tests)
-- [What I would do differently](#what-i-would-do-differently)
 
 ---
 
@@ -275,9 +273,5 @@ A single large prompt asking the AI to plan, execute, and summarize all at once 
 ### Why Server-Sent Events (SSE)?
 
 SSE keeps the connection open so the server can push each reasoning step to the UI as it happens. The user sees the agent thinking in real time rather than waiting for a single response at the end.
-
-### Why three MCP tools?
-
-The three tools cover the three main categories required by the assignment: file system access (`filesystem`), text transformation (`summarise`), and math/utility operations (`calculator`). Together they demonstrate the agent's ability to combine different tool types to solve a goal.
 
 ---
