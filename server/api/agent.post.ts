@@ -5,10 +5,11 @@
 // SSE (Server-Sent Events) keeps the connection open so the UI
 // can show each reasoning step as it happens in real time.
 
-import { runTaskRunner } from '../lib/taskRunnerGraph'
+import { runTaskRunner } from '../lib/runner'
 import { filesystemTool } from '../mcp/filesystem'
 import { summariseTool }  from '../mcp/summarise'
 import { calculatorTool } from '../mcp/calculator'
+import { weatherTool }    from '../mcp/weather'
 import type { AgentStep, ProviderName } from '../../types/agent'
 
 export default defineEventHandler(async (event) => {
@@ -37,9 +38,9 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 500, statusMessage: `API key not set for: ${provider}` })
   }
 
-  // Register all three MCP tools available to the agent
-  const tools = [filesystemTool, summariseTool, calculatorTool]
-  const encoder = new TextEncoder()
+  // Register all MCP tools available to the agent
+    const tools = [filesystemTool, summariseTool, calculatorTool, weatherTool]
+    const encoder = new TextEncoder()
 
   // Set SSE headers to keep the connection open for streaming
   setResponseHeaders(event, {

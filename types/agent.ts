@@ -26,3 +26,15 @@ export interface McpTool {
   description: string
   run: (input: string) => Promise<string>
 }
+
+
+
+// ── UI TYPES ──────────────────────────────────────────────────────────────
+
+export interface HistoryEntry {
+    goal: string
+    provider: ProviderName
+    steps: AgentStep[]
+    answer: string | null
+    error: string | null
+}

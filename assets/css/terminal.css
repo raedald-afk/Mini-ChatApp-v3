@@ -1,0 +1,153 @@
+/* assets/css/terminal.css */
+/* All styles for the TaskRunner terminal UI */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.terminal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    width: 70%;
+    margin: 0 auto;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 14px;
+}
+
+/* ── OUTPUT AREA ── */
+
+.output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 0 16px;
+}
+
+.intro {
+    color: #8b949e;
+    margin-bottom: 16px;
+}
+
+/* ── CONVERSATION ENTRY ── */
+
+.user-line {
+    color: #79c0ff;
+    margin: 12px 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prompt {
+    color: #3fb950;
+}
+
+.provider-badge {
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: #21262d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    text-transform: uppercase;
+}
+
+/* ── AGENT STEPS ── */
+
+.step {
+    margin-left: 20px;
+    margin-bottom: 4px;
+}
+
+.thought {
+    color: #8b949e;
+}
+
+.tool-call {
+    color: #d2a8ff;
+}
+
+.tool-output {
+    color: #a5d6ff;
+    white-space: pre-wrap;
+}
+
+/* ── RESULT ── */
+
+.answer {
+    color: #3fb950;
+    margin: 8px 0 16px;
+}
+
+.error-line {
+    color: #f85149;
+}
+
+/* ── THINKING INDICATOR ── */
+
+.thinking {
+    color: #8b949e;
+}
+
+.dots {
+    animation: blink 1.2s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ── INPUT BAR ── */
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #30363d;
+    padding: 12px 0 20px;
+    background: #0d1117;
+    position: sticky;
+    bottom: 0;
+}
+
+.provider-select {
+    background: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+    .provider-select:disabled {
+        opacity: 0.5;
+    }
+
+    .provider-select option {
+        background: #21262d;
+    }
+
+.goal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #c9d1d9;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+    .goal-input:disabled {
+        opacity: 0.5;
+    }

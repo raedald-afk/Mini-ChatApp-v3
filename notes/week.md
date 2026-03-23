@@ -1,7 +1,22 @@
 # Week of March 17
 
-- Finished the onboarding redesign
-- Fixed two bugs in the auth flow
-- Reviewed 3 pull requests
-- Team retro on Friday
-- Blocked on API contract from backend team
+This week was quite productive for the team. We started by finishing the 
+onboarding redesign, ensuring that new users have a smoother experience
+ when signing up. Several usability issues were identified in the previous 
+ design, and these were addressed with new flows and interactive elements. 
+ On the technical side, two critical bugs in the authentication flow were fixed, 
+ preventing occasional login failures and session errors. 
+ 
+
+The code review process was active as well, with three pull requests thoroughly 
+reviewed and merged. Each review included detailed feedback on code quality, naming
+ conventions, and performance optimizations. During the weekly team retrospective,
+ we discussed what went well and what could be improved, including better communication
+ between frontend and backend developers. One major blocker this week was the missing
+ API contract from the backend team, which delayed progress on a few features. 
+
+Additional notes include plans for next week: prioritizing dashboard improvements, 
+enhancing the login experience, and implementing a new notifications system. We also
+ plan to refactor some of the older modules to improve maintainability and reduce 
+ technical debt. Overall, despite some blockers, the team maintained a high velocity 
+ and managed to deliver key tasks on schedule.

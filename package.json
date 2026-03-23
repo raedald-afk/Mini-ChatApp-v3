@@ -9,12 +9,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "nuxt": "^3.13.0",
     "@langchain/core": "latest",
-    "@langchain/groq": "latest",
     "@langchain/google-genai": "latest",
+    "@langchain/groq": "latest",
+    "@langchain/langgraph": "latest",
     "@langchain/openai": "latest",
-    "@langchain/langgraph": "latest"
+    "@microsoft/fetch-event-source": "^2.0.1",
+    "nuxt": "^3.13.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
