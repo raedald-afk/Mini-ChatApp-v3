@@ -1,7 +1,7 @@
 // composables/useAgent.ts
 // Vue composable — manages agent state and consumes the SSE stream.
 // Uses @microsoft/fetch-event-source instead of manual stream parsing:
-// no while(true), proper abort/cleanup, automatic error handling.
+
 import { ref, nextTick } from 'vue' // Fixes 'ref' and 'nextTick'
 import { fetchEventSource } from '@microsoft/fetch-event-source'
 import type { AgentStep } from '../types/agent'

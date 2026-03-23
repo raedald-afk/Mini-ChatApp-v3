@@ -4,7 +4,7 @@
 
 import { createLlm } from './llm'
 import { buildGraph } from './nodes'
-import type { AgentStep, McpTool, ProviderName } from '../../types/agent'
+import type { AgentStep, McpTool, ProviderName, AgentState } from '../../types/agent'
 
 export async function runTaskRunner(
   goal: string,
@@ -18,13 +18,16 @@ export async function runTaskRunner(
   const llm   = createLlm(provider, apiKey)
   const graph = buildGraph(llm, tools, onStep)
 
-  const result = await graph.invoke({
-    goal,
-    summary:     '',
-    plan:        [],
-    stepResults: [],
-    finalAnswer: null,
-  })
+    const initialState: AgentState = {
+        goal,
+        summary: '',
+        plan: [],
+        stepResults: [],
+        finalAnswer: null,
+    }
+
+    // only cast HERE (at the boundary)
+    const result = await graph.invoke(initialState as any)
 
   return result.finalAnswer ?? 'Could not produce a final answer.'
 }
